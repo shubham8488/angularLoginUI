@@ -1,0 +1,38 @@
+
+
+
+<div class="container">
+    <div class="card">
+
+        <h1>Login Here</h1>
+
+        
+    
+    <form  (ngSubmit)="submitForm()" >
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>username</mat-label>
+            <input required name="username"  [(ngModel)]="data.username"   matInput placeholder="username">
+          
+          </mat-form-field>
+
+          <mat-form-field class="field" appearance="fill">
+              <mat-label>password</mat-label>
+              <input  required name="password"  [(ngModel)]="data.password" matInput placeholder="password">
+            
+            </mat-form-field>
+
+
+            <div class="text-center">
+
+                <mat-spinner  *ngIf="flag" style="margin: auto;"></mat-spinner>
+  
+                <button type="submit"   mat-raised-button color="primary"  > Submit </button>
+                <button  type="reset" mat-raised-button color="accent"  > Clear </button>
+              </div>
+        
+
+    </form>
+
+    
+    </div>
+</div>
